@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+    --fixed-margin: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--Very-Dark-Gray);
+}
+
+#map { 
+    height: 500px; 
+}
+
+header {
+    background-image: url('/images/pattern-bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 1rem var(--fixed-margin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding-bottom: 10rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+}
+
+header .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .input-group input {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1rem;
+    padding-right: 8rem;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--Very-Dark-Gray);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+header .input-group input:focus {
+    outline: none;
+}
+
+
+header .input-group button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    background-color: hsl(0, 0%, 59%);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: black;
+}
+
+header .input-group button img {
+    width: 1rem;
+    height: 1rem;
+}
+
+header .input-group button:hover {
+    background-color: hsl(0, 0%, 17%);
+}
+
+
+header .input-group {
+    position: relative;
+}
+
+section {
+    margin: 2.5rem;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: absolute;
+    top: 20%;
+    width: 430px;
+    z-index: 9999;
+    background-color: white;
+    border-radius: 0.8rem;
+}
+
+section h2 {
+    color: var(--Dark-Gray);
+    font-size: .7rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: .3rem;
+}
+
+section p {
+    color: var(--Very-Dark-Gray);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+@media (min-width: 868px) {
+    header {
+        background-image: url('/images/pattern-bg-desktop.png');
+    }
+
+    section {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 1100px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    section p {
+        font-size: 1.5rem;
+    }
+
+    section div:not(section div:first-child) 
+    {
+        border-left: 1px solid var(--Dark-Gray);
+        padding-left: 1.5rem;
+    }
+    
+
+    header .input-group input {
+        font-size: 1.1rem;
+        width: 500px;
+    }
+
+
+    
+
+
+}
+
+@media (max-width: 400px)
+{
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header .input-group input {
+        font-size: .8rem;
+        padding-right: 4rem;
+    }
+
+    section {
+        top: 20% !important;
+    }
+
+    section.active {
+        top: 40% !important;
+    }
+
+    header .input-group button {
+        padding: .8rem 1rem;
+        font-size: .8rem;
+    }
+
+    section {
+        width: 270px;
+    }
+}
